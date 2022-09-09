@@ -53,5 +53,4 @@
     curl_close ($ch);
     
     echo "Notification sent!";
-    // AAAAfDXXMPY:APA91bHVtWSX5ofZf_15cQ1-3gj711ak-B3tjBPpT_JAA_fQ_4kZ_nX5TXueNaL5so8nZ6Nf66pCxknUF3-k8QYTou9xx5fCk4Sb48Mf_SyD9cpkSlpqKWtMH0k3o4-LoydZeueTeqqK
 ?>
