@@ -5,8 +5,13 @@ header('Content-Type: application/json');
 $courseData = array();
 $url = $_GET['url'];
 
+     if($url=='/rakuten/') {
+         $jsonObj = json_decode('{}');
+         $jsonObj->url = 'https://bit.ly/3PkuE4N';
+         $courseData [] = $jsonObj;
+      }
+
      // Machine start here
-        // Machine start here
       $ch = curl_init();
       curl_setopt($ch, CURLOPT_URL, 'https://www.discudemy.com/go/'.$url); // target
       curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']); // provide a user-agent

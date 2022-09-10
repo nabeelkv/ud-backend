@@ -1,6 +1,7 @@
 <?php
 // error_reporting(0);
 include("simple_html_dom.php");
+include("du-disc-image.php");
 
 header('Content-Type: application/json');
 $l = 14;
@@ -17,6 +18,17 @@ $result = curl_exec($ch);
 curl_close($ch);
 $site_html = str_get_html($result);
 ///////////////////////////////////////
+
+if($p=='1') {
+  $jsonObj2 = json_decode('{}');
+  $jsonObj2->title = 'Udemy Sale: All Courses up to 90% OFF Now!';
+  $jsonObj2->thumbnail = $ud_image;
+  $jsonObj2->topic = 'Udemy Discount';
+  $jsonObj2->url = '/rakuten/';
+  $jsonObj2->isLocked = false;
+
+  $posts [] = $jsonObj2; 
+}
 
 //Manage machine here
 if(!$site_html) {
